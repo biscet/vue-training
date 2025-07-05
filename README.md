@@ -1,1 +1,1 @@
-Vue + Vuex + Vue Router
+Vue + Vuex + Vue Router + TS

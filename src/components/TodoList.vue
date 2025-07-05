@@ -1,7 +1,11 @@
 <template>
-    <ul class="todo-list">
+    <transition-group
+      name="todo"          
+      tag="ul"             
+      class="todo-list"
+    >
       <todo-item v-for="t in tasks" :key="t.id" :task="t" />
-    </ul>
+    </transition-group>
   </template>
   
 <script setup lang="ts">
@@ -16,10 +20,31 @@
     });
 </script>
 
-<style scoped>
-    .todo-list {
-        margin-top: 16px;
-        list-style: none;
-        padding: 0;
+<style scoped lang="scss">
+  .todo-list {
+    margin-top: 16px;
+    list-style: none;
+    padding: 0;
+  }
+
+  .todo {
+    &-enter-from,
+    &-leave-to {
+      opacity: 0;
+      transform: translateY(-8px);
     }
+
+    &-enter-active,
+    &-leave-active {
+      transition: 0.25s ease;
+    }
+
+    &-leave-active {
+      position: absolute;
+    }
+
+    &-move {
+      transition: transform 0.25s ease;
+    }
+  }
 </style>

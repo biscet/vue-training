@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from "vue-router";
 import {
-  AboutPage,
+  DifferencePage,
   GeneralPage,
   UserPage,
   CalculatorPage,
   TodoPage,
+  PostsPage,
 } from "../pages";
 import PATHS from "./constants";
 
@@ -14,8 +15,8 @@ const routes = [
     component: GeneralPage,
   },
   {
-    path: PATHS.ABOUT,
-    component: AboutPage,
+    path: PATHS.DIFFERENCE,
+    component: DifferencePage,
   },
   {
     path: `${PATHS.USER}/:id`,
@@ -30,6 +31,10 @@ const routes = [
   {
     path: PATHS.TODO,
     component: TodoPage,
+  },
+  {
+    path: PATHS.POSTS,
+    component: PostsPage,
   },
 ];
 

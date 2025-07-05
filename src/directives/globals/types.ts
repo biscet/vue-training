@@ -11,3 +11,9 @@ export interface NamedDirective {
   name: string;
   directive: ObjectDirective;
 }
+
+//infinite
+
+export interface InfiniteEl extends HTMLElement {
+  cb?: () => void;
+}

@@ -9,28 +9,28 @@
 </template>
   
 <script setup lang="ts">
-    import { ref, watch, useAttrs } from 'vue';
+    import { computed, useAttrs, defineProps, defineEmits } from 'vue';
     import type { InputProps } from './types';
 
     defineOptions({ name: 'my-input' });
 
-    const {
-        type = 'text',
-        disabled = false,
-        modelValue = '',
-    } = defineProps<InputProps>();
+    const props = defineProps<InputProps>();
 
     const emit = defineEmits<{
         (e: 'update:modelValue', value: string): void;
+        (e: 'update:raw', value: string): void;
     }>();
 
-    const model = ref(modelValue);
-
-    watch(model, (v) => emit('update:modelValue', v));
-    watch(() => modelValue, (v) => (model.value = v));
+    const model = computed<string>({
+        get: () => (props.raw !== undefined ? props.raw : props.modelValue) ?? '',
+        set: (v) => {
+            if (props.raw !== undefined) emit('update:raw', v);
+            else emit('update:modelValue', v);
+        },
+    });
 
     const restAttrs = useAttrs();
-</script> 
+</script>
   
 <style scoped lang="scss">
     .input {

@@ -10,7 +10,8 @@ export type NamedComponent = Component & { name: string };
 
 //Input
 export interface InputProps {
-  type?: "text" | "password" | "email" | "number";
-  disabled?: boolean;
   modelValue?: string;
+  raw?: string;
+  type?: string;
+  disabled?: boolean;
 }

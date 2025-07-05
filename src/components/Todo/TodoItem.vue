@@ -24,8 +24,8 @@
 
 <script setup lang="ts">
   import { ref, watch } from 'vue';
-  import { useMapAction } from '../composables/';
-  import type { Task } from '../store/types';
+  import { useMapAction } from '../../composables';
+  import type { Task } from '../../store/types';
 
   const props = defineProps<{ task: Task }>();
 

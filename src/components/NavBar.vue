@@ -4,9 +4,10 @@
 
         <div class="navbar__buttons">
             <my-button @click="navigateToPath(PATHS.GENERAL)">Главная</my-button>
-            <my-button @click="navigateToPath(PATHS.ABOUT)">Разное</my-button>
+            <my-button @click="navigateToPath(PATHS.DIFFERENCE)">Разное</my-button>
             <my-button @click="navigateToPath(PATHS.CALCULATOR)">Калькулятор</my-button>
             <my-button @click="navigateToPath(PATHS.TODO)">Todo</my-button>
+            <my-button @click="navigateToPath(PATHS.POSTS)">Посты</my-button>
         </div>
     </div>
 </template>

@@ -12,7 +12,7 @@
     import { computed } from 'vue';
     import { useStore } from 'vuex';
     import TodoItem from './TodoItem.vue';
-    import type { Task } from '../store/types';
+    import type { Task } from '../../store/types';
 
     const store = useStore();
     const tasks = computed<Task[]>(() => {

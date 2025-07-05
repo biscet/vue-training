@@ -1,8 +1,9 @@
 export default {
   BASE: "",
   GENERAL: "/",
-  ABOUT: "/about",
+  DIFFERENCE: "/difference",
   USER: "/user",
   CALCULATOR: "/calculator",
   TODO: "/todo",
+  POSTS: "/posts",
 };

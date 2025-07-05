@@ -4,7 +4,7 @@
 
         <div class="navbar__buttons">
             <my-button @click="navigateToPath(PATHS.GENERAL)">Главная</my-button>
-            <my-button @click="navigateToPath(PATHS.ABOUT)">О сайте</my-button>
+            <my-button @click="navigateToPath(PATHS.ABOUT)">Разное</my-button>
             <my-button @click="navigateToPath(PATHS.CALCULATOR)">Калькулятор</my-button>
             <my-button @click="navigateToPath(PATHS.TODO)">Todo</my-button>
         </div>

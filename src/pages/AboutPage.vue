@@ -22,11 +22,15 @@
                 <my-button type="submit">Отправить</my-button>
             </form>
         </my-modal>
+
+        <difference-inputs-native />
+        <difference-inputs-component />
     </div>
 </template>
 
 <script setup lang="ts">
     import { ref } from 'vue';
+    import { DifferenceInputsNative, DifferenceInputsComponent } from '../components'
 
     const show  = ref(false);
     const name  = ref('');
